@@ -40,7 +40,7 @@ public class FillRegFormXPath {
         //$x("//div[contains(@class, 'react-datepicker__day--029') and not(contains(@class, 'react-datepicker__day--outside-month'))]").click();
         $x("//div[contains(@aria-label, 'December 29th, 1987')]").click();
 
-        $x("//input[@id='subjectsInput']").setValue("maths").pressEnter();
+        $x("//input[@id='subjectsInput']").setValue("Maths").pressEnter();
         $x("//div[@id='hobbiesWrapper']").$(byText("Music")).parent().click();
         $x("//input[@id='uploadPicture']").uploadFromClasspath("img/Alukard.png");
         $x("//*[@id='currentAddress']").setValue("Saint-P, Red kursant, house 4, app 15");
@@ -53,8 +53,14 @@ public class FillRegFormXPath {
 
         $x("//div[@class='modal-content']").shouldHave(text("Thanks for submitting the form"));
         $x("//div[@class='table-responsive']").shouldHave(text("Aleksandra" + " " + "Dikaya"),
-                text("dikaya@gmail.com"), text("Female"), text("1236547890"), text("29 December,1987"), text("Maths"),
-                text("Music"), text("Alukard.png"), text("Saint-P, Red kursant, house 4, app 15"),
+                text("dikaya@gmail.com"),
+                text("Female"),
+                text("1236547890"),
+                text("29 December,1987"),
+                text("Maths"),
+                text("Music"),
+                text("Alukard.png"),
+                text("Saint-P, Red kursant, house 4, app 15"),
                 text("Haryana" + " " + "Karnal"));
 
         $x("//button[@id='closeLargeModal']").click();

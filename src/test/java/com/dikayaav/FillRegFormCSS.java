@@ -40,7 +40,7 @@ public class FillRegFormCSS {
         //$(".react-datepicker__day--029:not(.react-datepicker__day--outside-month)").click();
         $("[aria-label$='December 24th, 1987']").click(); //$= оканчивается на
 
-        $("#subjectsInput").setValue("maths").pressEnter();
+        $("#subjectsInput").setValue("Maths").pressEnter();
         $("#hobbiesWrapper").$(byText("Music")).click();
 
         $("#uploadPicture").uploadFromClasspath("img/Alukard.png");
@@ -53,8 +53,14 @@ public class FillRegFormCSS {
         $("#submit").click();
 
         $(".table-responsive").shouldHave(text("Aleksandra" + " " + "Dikaya"),
-                text("dikaya@gmail.com"), text("Female"), text("1236547890"), text("29 December,1987"), text("Maths"),
-                text("Music"), text("Alukard.png"), text("Saint-P, Red kursant, house 4, app 15"),
+                text("dikaya@gmail.com"),
+                text("Female"),
+                text("1236547890"),
+                text("29 December,1987"),
+                text("Maths"),
+                text("Music"),
+                text("Alukard.png"),
+                text("Saint-P, Red kursant, house 4, app 15"),
                 text("Haryana" + " " + "Karnal"));
 
         $("#closeLargeModal").click();
