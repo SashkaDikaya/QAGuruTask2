@@ -1,7 +1,6 @@
 package com.dikayaav.tests;
 
 import com.codeborne.selenide.Configuration;
-import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -15,15 +14,11 @@ public class FillRegFormCSS {
     @BeforeAll
     static void beforeAll() {
         Configuration.startMaximized = true;
-    }
-
-    @AfterAll
-    static void afterAll() {
         Configuration.holdBrowserOpen = true;
     }
 
     @Test
-    void FillRegForm() {
+    void fillRegForm() {
         open("https://demoqa.com/automation-practice-form");
         $(".practice-form-wrapper").shouldHave(text("Student Registration Form"));
 
@@ -36,7 +31,7 @@ public class FillRegFormCSS {
         $("#dateOfBirthInput").click();
         $(".react-datepicker__month-select").selectOption("December");
         $(".react-datepicker__year-select").selectOption("1987");
-        $("[aria-label$='December 24th, 1987']").click();
+        $("[aria-label$='December 29th, 1987']").click();
 
         $("#subjectsInput").setValue("Maths").pressEnter();
         $("#hobbiesWrapper").$(byText("Music")).click();
@@ -60,7 +55,7 @@ public class FillRegFormCSS {
                 text("Saint-P, Red kursant, house 4, app 15"),
                 text("Haryana" + " " + "Karnal"));
 
-        $("#closeLargeModal").click();
+        //$("#closeLargeModal").click();
 
     }
 }

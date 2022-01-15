@@ -1,7 +1,6 @@
 package com.dikayaav.tests;
 
 import com.codeborne.selenide.Configuration;
-import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -15,10 +14,6 @@ public class FillRegFormXPath {
     @BeforeAll
     static void beforeAll() {
         Configuration.startMaximized = true;
-    }
-
-    @AfterAll
-    static void afterAll() {
         Configuration.holdBrowserOpen = true;
     }
 
