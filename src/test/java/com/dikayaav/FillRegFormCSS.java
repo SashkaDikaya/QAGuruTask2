@@ -36,13 +36,10 @@ public class FillRegFormCSS {
         $("#dateOfBirthInput").click();
         $(".react-datepicker__month-select").selectOption("December");
         $(".react-datepicker__year-select").selectOption("1987");
-        //используя not
-        //$(".react-datepicker__day--029:not(.react-datepicker__day--outside-month)").click();
-        $("[aria-label$='December 24th, 1987']").click(); //$= оканчивается на
+        $("[aria-label$='December 24th, 1987']").click();
 
         $("#subjectsInput").setValue("Maths").pressEnter();
         $("#hobbiesWrapper").$(byText("Music")).click();
-
         $("#uploadPicture").uploadFromClasspath("img/Alukard.png");
         $("#currentAddress").setValue("Saint-P, Red kursant, house 4, app 15");
         $("#state").click();
@@ -64,11 +61,6 @@ public class FillRegFormCSS {
                 text("Haryana" + " " + "Karnal"));
 
         $("#closeLargeModal").click();
-
-
-
-
-
 
     }
 }

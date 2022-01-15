@@ -36,8 +36,6 @@ public class FillRegFormXPath {
         $x("//input[@id='dateOfBirthInput']").click();
         $x("//select[@class='react-datepicker__month-select']").selectOption("December");
         $x("//select[@class='react-datepicker__year-select']").selectOption("1987");
-        //используя not (contains)
-        //$x("//div[contains(@class, 'react-datepicker__day--029') and not(contains(@class, 'react-datepicker__day--outside-month'))]").click();
         $x("//div[contains(@aria-label, 'December 29th, 1987')]").click();
 
         $x("//input[@id='subjectsInput']").setValue("Maths").pressEnter();
@@ -64,22 +62,6 @@ public class FillRegFormXPath {
                 text("Haryana" + " " + "Karnal"));
 
         $x("//button[@id='closeLargeModal']").click();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     }
 
