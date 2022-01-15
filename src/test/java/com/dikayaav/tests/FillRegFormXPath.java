@@ -1,4 +1,4 @@
-package com.dikayaav;
+package com.dikayaav.tests;
 
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.AfterAll;
