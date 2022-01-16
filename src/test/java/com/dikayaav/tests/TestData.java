@@ -1,10 +1,6 @@
 package com.dikayaav.tests;
 
-import com.github.javafaker.Faker;
-
-import java.util.Locale;
-
-public class TestData {
+public class TestData extends TestBase{
 
     static String
     firstName = "Alexandra",
@@ -22,7 +18,6 @@ public class TestData {
     state = "Haryana",
     city = "Karnal";
 
-    static Faker faker = new Faker(new Locale("ru"));
     public static String
     randomFirstName = faker.name().firstName(),
     randomLastName = faker.name().lastName(),
