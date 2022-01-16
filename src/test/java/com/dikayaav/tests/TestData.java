@@ -1,5 +1,9 @@
 package com.dikayaav.tests;
 
+import com.github.javafaker.Faker;
+
+import java.util.Locale;
+
 public class TestData {
 
     static String
@@ -17,6 +21,14 @@ public class TestData {
     address = "Saint-P, Red kursant, house 4, app 15",
     state = "Haryana",
     city = "Karnal";
+
+    static Faker faker = new Faker(new Locale("ru"));
+    public static String
+    randomFirstName = faker.name().firstName(),
+    randomLastName = faker.name().lastName(),
+    randomEmail = faker.internet().emailAddress(),
+    randomAddress = faker.address().fullAddress(),
+    randomPhoneNumber = faker.phoneNumber().subscriberNumber(10);
 
 
 

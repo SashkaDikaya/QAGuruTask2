@@ -11,31 +11,31 @@ public class FillFormTest extends TestBase{
 
         registrationPage.openPage();
         registrationPage
-                .typeFirstName(firstName)
-                .typeLastName(lastName)
+                .typeFirstName(randomFirstName)
+                .typeLastName(randomLastName)
                 .typeUserEmail(email)
                 .selectGenderButton(femaleGender)
-                .typePhoneNumber(phone)
+                .typePhoneNumber(randomPhoneNumber)
                 .calendarComponents.setDate(day, month, year);
         registrationPage.typeSubject(subject)
                 .typeHobbie(hobbie)
                 .pressUploadPictureButton(picture)
-                .typeAddress(address)
+                .typeAddress(randomAddress)
                 .pressStateDDList()
                 .setStateValue(state)
                 .pressCityDDList()
                 .setStateValue(city)
                 .pressSubmitButton();
 
-       registrationPage.checkResultsValue("Student name", firstName + " " + lastName)
+       registrationPage.checkResultsValue("Student name", randomFirstName + " " + randomLastName)
                 .checkResultsValue("Student Email", email)
                 .checkResultsValue("Gender", femaleGender)
-                .checkResultsValue("Mobile", phone)
+                .checkResultsValue("Mobile", randomPhoneNumber)
                 .checkResultsValue("Date of Birth", day + " " + month + "," + year)
                 .checkResultsValue("Subjects", subject)
                 .checkResultsValue("Hobbies", hobbie)
                 .checkResultsValue("Picture", "Alukard.png")
-                .checkResultsValue("Address", address)
+                .checkResultsValue("Address", randomAddress)
                 .checkResultsValue("State and City", state + " " + city);
     }
 }
