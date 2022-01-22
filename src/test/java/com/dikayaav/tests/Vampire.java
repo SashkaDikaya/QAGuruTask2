@@ -4,34 +4,33 @@ public class Vampire {
 
     String name;
     int age;
-    int hunger;
     boolean isHunger;
-
-    public static void main (String[]args){
-        Vampire vampire = new Vampire(); //объект
-        vampire.name = "Алукард";
-        vampire.age = 1000;
-        vampire.isHunger = true;
-
-        Vampire vampire2 = new Vampire(); //объект
-        vampire2.name = "Дракула";
-        vampire2.age = 2000;
-        vampire2.isHunger = true;
-    }
-
-
+    int power;
+    int damage = power * 2;
+    int health;
+    int sunDamage = 1000;
+    int bite;
 
     void eat() {
-        hunger = 0;
+        System.out.println(name + " выпил крови");
         isHunger = false;
     }
 
-
     void talk() {
-        if (isHunger = true) {
+
+        if (isHunger == false) {
             System.out.println(name + ": Пойду посплю");
         } else {
             System.out.println(name + ": Пойду поем");
+        }
+     }
+
+     void sunrise() {
+        health = health - sunDamage;
+        if (health <= 0) {
+            System.out.println(name + " воспламенился и истлел");
+        } else {
+            System.out.println(name + " раненый уползает в тень");
         }
      }
 
