@@ -6,10 +6,10 @@ public class Vampire {
     int age;
     boolean isHunger;
     int power;
-    int damage = power * 2;
-    int health;
+    int health = age;
     int sunDamage = 1000;
-    int bite;
+
+
 
     void eat() {
         System.out.println(name + " выпил крови");
@@ -17,7 +17,6 @@ public class Vampire {
     }
 
     void talk() {
-
         if (isHunger == false) {
             System.out.println(name + ": Пойду посплю");
         } else {
@@ -34,6 +33,11 @@ public class Vampire {
         }
      }
 
+
+
+
+     void drinkBlood() {
+     }
 
 }
 

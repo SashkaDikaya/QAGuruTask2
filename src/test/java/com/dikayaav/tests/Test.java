@@ -8,23 +8,17 @@ public class Test {
         vampire.age = 1000;
         vampire.isHunger = true;
         vampire.power = 13;
-        vampire.health = 1000;
-        vampire.bite = 300;
 
         Vampire vampire2 = new Vampire(); //объект
         vampire2.name = "Дракула";
         vampire2.age = 2000;
         vampire2.isHunger = true;
         vampire.power = 16;
-        vampire2.health = 2000;
-        vampire2.bite = 450;
 
-        Mage mage = new Mage(); //объект
-        mage.mageClass = "Некромант";
-        mage.age = 46;
-        mage.power = 3;
-        mage.damage = 5;
-        mage.health = 180;
+
+        Human human = new Human();
+        human.health = 100;
+
 
         vampire.eat();
         vampire.talk();
