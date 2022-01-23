@@ -36,7 +36,7 @@ public class FillRegFormCSS {
         $("#dateOfBirthInput").click();
         $(".react-datepicker__month-select").selectOption("December");
         $(".react-datepicker__year-select").selectOption("1987");
-        $("[aria-label$='December 24th, 1987']").click();
+        $("[aria-label$='December 29th, 1987']").click();
 
         $("#subjectsInput").setValue("Maths").pressEnter();
         $("#hobbiesWrapper").$(byText("Music")).click();
