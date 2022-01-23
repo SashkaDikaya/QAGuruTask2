@@ -34,7 +34,7 @@ public class FillFormTest extends TestBase{
                 .checkResultsValue("Date of Birth", day + " " + month + "," + year)
                 .checkResultsValue("Subjects", subject)
                 .checkResultsValue("Hobbies", hobbie)
-                .checkResultsValue("Picture", "Alukard.png")
+                .checkResultsValue("Picture", "Alukard.jpg")
                 .checkResultsValue("Address", randomAddress)
                 .checkResultsValue("State and City", state + " " + city);
     }

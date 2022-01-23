@@ -13,7 +13,7 @@ public class TestData extends TestBase{
     year = "1987",
     subject = "Maths",
     hobbie = "Music",
-    picture = "img/Alukard.png",
+    picture = "img/Alukard.jpg",
     address = "Saint-P, Red kursant, house 4, app 15",
     state = "Haryana",
     city = "Karnal";

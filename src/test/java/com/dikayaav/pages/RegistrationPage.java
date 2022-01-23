@@ -2,6 +2,7 @@ package com.dikayaav.pages;
 
 import com.codeborne.selenide.SelenideElement;
 import com.dikayaav.pages.components.CalendarComponents;
+import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
@@ -28,34 +29,41 @@ public class RegistrationPage {
 
     public CalendarComponents calendarComponents = new CalendarComponents();
 
+    @Step("Открытие формы регистрации")
     public void openPage() {
         open("https://demoqa.com/automation-practice-form");
     }
 
+    @Step("Ввод имени")
     public RegistrationPage typeFirstName(String firstName) {
         firstNameInput.setValue(firstName);
         return this;
     }
 
+    @Step("Ввод фамилии")
     public RegistrationPage typeLastName(String lastName) {
         lastNameInput.setValue(lastName);
         return this;
     }
 
+    @Step("Ввод емэйла")
     public RegistrationPage typeUserEmail(String userEmail) {
         userEmailInput.setValue(userEmail);
         return this;
     }
 
+    @Step("Выбор пола")
     public RegistrationPage selectGenderButton(String gender) {
         genderRadioButton.$(byText(gender)).click();
         return this;
     }
 
+    @Step("Ввод номера телефона")
     public RegistrationPage typePhoneNumber(String phoneNumber) {
         phoneNumberInput.setValue(phoneNumber);
         return this;
     }
+
 
     public RegistrationPage typeSubject(String subject) {
         subjectsInput.setValue(subject).pressEnter();
