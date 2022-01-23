@@ -11,7 +11,7 @@ public class TestBase {
 
     @BeforeAll
     static void beforeAll() {
-        Configuration.startMaximized = true;
+        //Configuration.startMaximized = true;
         Configuration.holdBrowserOpen = true;
     }
 
