@@ -3,13 +3,10 @@ package com.dikayaav.tests;
 public class Vampire {
 
     String name;
-    int age;
     boolean isHunger;
     int power;
-    int health = age;
+    int health;
     int sunDamage = 1000;
-
-
 
     void eat() {
         System.out.println(name + " выпил крови");
@@ -17,14 +14,16 @@ public class Vampire {
     }
 
     void talk() {
-        if (isHunger == false) {
-            System.out.println(name + ": Пойду посплю");
+        System.out.println(name + " говорит: ");
+        if (isHunger) {
+            System.out.println("'Пойду посплю'");
         } else {
-            System.out.println(name + ": Пойду поем");
+            System.out.println("'Пойду поем'");
         }
      }
 
      void sunrise() {
+         System.out.println(name + " говорит: 'О нет! Солнце застало меня в расплох!'");
         health = health - sunDamage;
         if (health <= 0) {
             System.out.println(name + " воспламенился и истлел");
@@ -34,15 +33,4 @@ public class Vampire {
      }
 
 
-
-
-     void drinkBlood() {
-     }
-
 }
-
-
-
-
-
-
