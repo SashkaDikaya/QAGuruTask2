@@ -3,13 +3,13 @@ package com.dikayaav.tests;
 public class Test {
 
     public static void main (String[]args){
-        Vampire vampire = new Vampire(); //объект
+        Vampire vampire = new Vampire();
         vampire.name = "Алукард";
         vampire.age = 1000;
         vampire.isHunger = true;
         vampire.power = 13;
 
-        Vampire vampire2 = new Vampire(); //объект
+        Vampire vampire2 = new Vampire();
         vampire2.name = "Дракула";
         vampire2.age = 2000;
         vampire2.isHunger = true;
