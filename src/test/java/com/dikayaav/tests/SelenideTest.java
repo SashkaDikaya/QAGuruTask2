@@ -3,9 +3,7 @@ package com.dikayaav.tests;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.WebDriverRunner;
-import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.*;
-import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -24,7 +22,7 @@ public class SelenideTest {
     @Severity(SeverityLevel.BLOCKER)
 
     void WebTest() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
+       // SelenideLogger.addListener("allure", new AllureSelenide());
         Selenide.open("https://github.com");
         $(".header-search-input").click();
         $(".header-search-input").sendKeys("eroshenkoam/allure-example");
