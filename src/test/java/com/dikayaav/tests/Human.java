@@ -16,4 +16,7 @@ void goToWork() {
         System.out.println(name + " идет домой");
     }
 }
+
+
+
 }
