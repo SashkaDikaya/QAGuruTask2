@@ -1,6 +1,7 @@
 package com.dikayaav.tests;
 
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import com.dikayaav.helper.Attach;
 import com.dikayaav.pages.RegistrationPage;
@@ -16,6 +17,7 @@ public class TestBase {
 
     @BeforeAll
     static void setUp() {
+        Configuration.startMaximized = true;
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserSize = "1920x1080";
@@ -27,13 +29,13 @@ public class TestBase {
         Configuration.browserCapabilities = capabilities;
     }
 
-    /*@AfterEach
+    @AfterEach
     void addAttachments() {
         Attach.screenshotAs("Last screenshot");
         Attach.pageSource();
         Attach.browserConsoleLogs();
         Attach.addVideo();
-    }*/
+    }
 
     RegistrationPage registrationPage = new RegistrationPage();
     static Faker faker = new Faker(new Locale("ru"));

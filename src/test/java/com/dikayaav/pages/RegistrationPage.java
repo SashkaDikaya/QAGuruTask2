@@ -21,9 +21,8 @@ public class RegistrationPage {
             hobbiesWrapper = $("#hobbiesWrapper"),
             addressInput = $("#currentAddress"),
             pictureUploadButton = $("#uploadPicture"),
-            stateDDList = $("#state"),
-            stateCityWrapper =  $("#stateCity-wrapper"),
-            cityDDList = $("#city"),
+            stateDDList = $("#react-select-3-input"),
+            cityDDList = $("#react-select-4-input"),
             submitButton = $("#submit"),
             resultsTable = $(".table-responsive");
 
@@ -85,18 +84,13 @@ public class RegistrationPage {
         return this;
     }
 
-    public RegistrationPage pressStateDDList() {
-        stateDDList.click();
-        return this;
-    }
-
     public RegistrationPage setStateValue(String state) {
-        stateCityWrapper.$(byText(state)).click();
+        stateDDList.setValue(state).pressEnter();
         return this;
     }
 
-    public RegistrationPage pressCityDDList() {
-        cityDDList.click();
+    public RegistrationPage setCityValue(String city) {
+        cityDDList.setValue(city).pressEnter();
         return this;
     }
 
