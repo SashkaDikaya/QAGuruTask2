@@ -27,13 +27,13 @@ public class TestBase {
         Configuration.browserCapabilities = capabilities;
     }
 
-    @AfterEach
+    /*@AfterEach
     void addAttachments() {
         Attach.screenshotAs("Last screenshot");
         Attach.pageSource();
         Attach.browserConsoleLogs();
         Attach.addVideo();
-    }
+    }*/
 
     RegistrationPage registrationPage = new RegistrationPage();
     static Faker faker = new Faker(new Locale("ru"));
