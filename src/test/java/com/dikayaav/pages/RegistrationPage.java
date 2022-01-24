@@ -63,42 +63,49 @@ public class RegistrationPage {
         return this;
     }
 
-
+    @Step("Ввод предметов")
     public RegistrationPage typeSubject(String subject) {
         subjectsInput.setValue(subject).pressEnter();
         return this;
     }
 
+    @Step("Выбор хобби")
     public RegistrationPage typeHobbie(String hobbie) {
         hobbiesWrapper.$(byText(hobbie)).click();
         return this;
     }
 
+    @Step("Ввод адреса")
     public RegistrationPage typeAddress(String address) {
         addressInput.setValue(address);
         return this;
     }
 
+    @Step("Загрузка фото")
     public RegistrationPage pressUploadPictureButton(String picture) {
         pictureUploadButton.uploadFromClasspath(picture);
         return this;
     }
 
+    @Step("Выбор штата")
     public RegistrationPage setStateValue(String state) {
         stateDDList.setValue(state).pressEnter();
         return this;
     }
 
+    @Step("Выбор города")
     public RegistrationPage setCityValue(String city) {
         cityDDList.setValue(city).pressEnter();
         return this;
     }
 
+    @Step("Утверждение формы")
     public RegistrationPage pressSubmitButton() {
         submitButton.click();
         return this;
     }
 
+    @Step("Проверка заполненных данных")
     public RegistrationPage checkResultsValue(String key, String value) {
         resultsTable.shouldHave(text(key))
                 .parent().shouldHave(text(value));

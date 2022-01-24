@@ -1,7 +1,6 @@
 package com.dikayaav.tests;
 
 import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import com.dikayaav.helper.Attach;
 import com.dikayaav.pages.RegistrationPage;
