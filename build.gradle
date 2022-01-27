@@ -10,9 +10,9 @@ repositories {
     mavenCentral()
 }
 
-def selenideVersion = "5.25.0",
-    junitVersion = "5.8.2",
-    slf4jVersion = "1.7.29",
+def selenideVersion = '6.1.2',
+    junitVersion = "5.7.2",
+    slf4jVersion = '1.7.33',
     allureVersion = "2.17.2"
 
 allure {

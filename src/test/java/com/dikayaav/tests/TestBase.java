@@ -16,7 +16,7 @@ public class TestBase {
 
     @BeforeAll
     static void setUp() {
-        Configuration.startMaximized = true;
+
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserSize = "1920x1080";
