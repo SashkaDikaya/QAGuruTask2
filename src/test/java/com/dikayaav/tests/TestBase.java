@@ -19,16 +19,15 @@ public class TestBase {
     @BeforeAll
     static void setUp() {
         String browser = System.getProperty("browser");
-        String version = System.getProperty("version", "91");
-        String size = System.getProperty("size", "1920x1080");
+        String version = System.getProperty("version");
+        String size = System.getProperty("size");
         String remoteUrl = System.getProperty("remoteUrl", "selenoid.autotests.cloud/wd/hub");
-        String login = System.getProperty("login", "user1");
-        String pass = System.getProperty("pass", "1234");
+        String login = System.getProperty("login");
+        String pass = System.getProperty("pass");
 
         Configuration.baseUrl = "https://demoqa.com";
 
         String url = "https://" + login + ":" + pass + "@" + remoteUrl;
-
         Configuration.remote = url;
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
