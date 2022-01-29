@@ -18,8 +18,6 @@ public class TestBase {
 
     @BeforeAll
     static void setUp() {
-        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-
         String browser = System.getProperty("browser", "chrome");
         String version = System.getProperty("version", "91");
         String remoteUrl = System.getProperty("remoteUrl", "selenoid.autotests.cloud/wd/hub");
