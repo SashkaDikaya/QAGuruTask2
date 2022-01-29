@@ -58,10 +58,10 @@ tasks.withType(Test) {
             exceptionFormat "short"
         }
     }
+}
 
-     task properties_tests(type: Test) {
-        useJUnitPlatform{
-            includeTags "properties"
-        }
+task properties_tests(type: Test) {
+    useJUnitPlatform{
+        includeTags "properties"
     }
 }
