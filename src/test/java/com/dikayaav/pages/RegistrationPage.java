@@ -4,6 +4,8 @@ import com.codeborne.selenide.SelenideElement;
 import com.dikayaav.pages.components.CalendarComponents;
 import io.qameta.allure.Step;
 
+import java.io.File;
+
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
@@ -83,7 +85,8 @@ public class RegistrationPage {
 
     @Step("Загрузка фото")
     public RegistrationPage pressUploadPictureButton(String picture) {
-        pictureUploadButton.uploadFromClasspath(picture);
+        //pictureUploadButton.uploadFromClasspath(picture);
+        pictureUploadButton.uploadFile(new File("src/test/resources/img/Alukard.jpg"));
         return this;
     }
 

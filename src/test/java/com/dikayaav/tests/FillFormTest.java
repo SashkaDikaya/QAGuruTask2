@@ -19,7 +19,7 @@ public class FillFormTest extends TestBase{
                 .calendarComponents.setDate(day, month, year);
         registrationPage.typeSubject(subject)
                 .typeHobbie(hobbie)
-                .pressUploadPictureButton(picture)
+                //.pressUploadPictureButton(picture)
                 .typeAddress(randomAddress)
                 .setStateValue(state)
                 .setCityValue(city)
@@ -32,7 +32,7 @@ public class FillFormTest extends TestBase{
                 .checkResultsValue("Date of Birth", day + " " + month + "," + year)
                 .checkResultsValue("Subjects", subject)
                 .checkResultsValue("Hobbies", hobbie)
-                .checkResultsValue("Picture", "Alukard.jpg")
+                //.checkResultsValue("Picture", "Alukard.jpg")
                 .checkResultsValue("Address", randomAddress)
                 .checkResultsValue("State and City", state + " " + city);
     }
