@@ -18,7 +18,7 @@ public class TestBase {
 
     @BeforeAll
     static void setUp() {
-        String browser = System.getProperty("browser", "chrome");
+        String browser = System.getProperty("browser");
         String version = System.getProperty("version", "91");
         String size = System.getProperty("size", "1920x1080");
         String remoteUrl = System.getProperty("remoteUrl", "selenoid.autotests.cloud/wd/hub");
@@ -26,8 +26,6 @@ public class TestBase {
         String pass = System.getProperty("pass", "1234");
 
         Configuration.baseUrl = "https://demoqa.com";
-        /*Configuration.browser = browser;
-        Configuration.browserVersion = version;*/
 
         String url = "https://" + login + ":" + pass + "@" + remoteUrl;
 
