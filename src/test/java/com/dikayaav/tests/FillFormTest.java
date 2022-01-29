@@ -1,5 +1,6 @@
 package com.dikayaav.tests;
 
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static com.dikayaav.tests.TestData.*;
@@ -7,6 +8,7 @@ import static com.dikayaav.tests.TestData.*;
 public class FillFormTest extends TestBase{
 
     @Test
+    @Tag("properties")
     void fillRegFormTest () {
 
         registrationPage.openPage();

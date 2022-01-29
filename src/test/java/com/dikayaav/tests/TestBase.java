@@ -18,11 +18,22 @@ public class TestBase {
 
     @BeforeAll
     static void setUp() {
-        Configuration.browserSize = "1920x1080";
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-        Configuration.baseUrl = "https://demoqa.com";
 
-        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+        String browser = System.getProperty("browser", "chrome");
+        String version = System.getProperty("version", "91");
+        String remoteUrl = System.getProperty("remoteUrl", "selenoid.autotests.cloud/wd/hub");
+        String login = System.getProperty("login", "user1");
+        String pass = System.getProperty("pass", "1234");
+
+        Configuration.baseUrl = "https://demoqa.com";
+        Configuration.browserSize = "1920x1080";
+        Configuration.browser = browser;
+        Configuration.browserVersion = version;
+
+        String url = "https://" + login + ":" + pass + "@" + remoteUrl;
+
+        Configuration.remote = url;
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
@@ -41,6 +52,5 @@ public class TestBase {
 
     RegistrationPage registrationPage = new RegistrationPage();
     static Faker faker = new Faker(new Locale("ru"));
-
 
 }
