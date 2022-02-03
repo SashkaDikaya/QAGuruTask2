@@ -1,0 +1,30 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "DESKTOP-ST6PQD8",
+    "children" : [ {
+      "name" : "8656@DESKTOP-ST6PQD8.Test worker(16)",
+      "children" : [ {
+        "name" : "fillRegFormTest()",
+        "uid" : "e87fbc494a415d94",
+        "parentUid" : "afcbc0e2d5c122ada139c9fe9b116f72",
+        "status" : "passed",
+        "time" : {
+          "start" : 1643906074603,
+          "stop" : 1643906117177,
+          "duration" : 42574
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "afcbc0e2d5c122ada139c9fe9b116f72"
+    } ],
+    "uid" : "5b32dee69e0602630b0d438fd960e5de"
+  } ]
+}

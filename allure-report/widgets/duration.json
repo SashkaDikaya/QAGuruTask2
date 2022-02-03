@@ -1,0 +1,11 @@
+[ {
+  "uid" : "e87fbc494a415d94",
+  "name" : "fillRegFormTest()",
+  "time" : {
+    "start" : 1643906074603,
+    "stop" : 1643906117177,
+    "duration" : 42574
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

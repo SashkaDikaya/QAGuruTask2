@@ -1,0 +1,26 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "com.dikayaav.tests.FillFormTest",
+    "children" : [ {
+      "name" : "fillRegFormTest()",
+      "uid" : "e87fbc494a415d94",
+      "parentUid" : "d73a91311b959d33b1ff72e87b8cdebe",
+      "status" : "passed",
+      "time" : {
+        "start" : 1643906074603,
+        "stop" : 1643906117177,
+        "duration" : 42574
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "d73a91311b959d33b1ff72e87b8cdebe"
+  } ]
+}
