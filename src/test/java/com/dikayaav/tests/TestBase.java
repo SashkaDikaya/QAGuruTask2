@@ -1,11 +1,9 @@
 package com.dikayaav.tests;
 
 import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.logevents.SelenideLogger;
 import com.dikayaav.helper.Attach;
 import com.dikayaav.pages.RegistrationPage;
 import com.github.javafaker.Faker;
-import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -29,6 +27,9 @@ public class TestBase {
 
         String url = "https://" + login + ":" + pass + "@" + remoteUrl;
         Configuration.remote = url;
+        Configuration.browser = browser;
+        Configuration.browserVersion = version;
+        Configuration.browserSize = size;
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
