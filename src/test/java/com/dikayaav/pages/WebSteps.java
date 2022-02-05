@@ -1,6 +1,5 @@
 package com.dikayaav.pages;
 
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.WebDriverRunner;
 import io.qameta.allure.Attachment;
@@ -9,8 +8,8 @@ import io.qameta.allure.Step;
 import java.nio.charset.StandardCharsets;
 
 import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.$x;
 import static org.openqa.selenium.By.linkText;
 import static org.openqa.selenium.By.partialLinkText;
 
@@ -44,8 +43,8 @@ public class WebSteps {
     }
 
     @Step("Проверяем наличие Issue {num}")
-    public void checkIssue (String num){
-        $(withText(num)).should(Condition.visible);
+    public void openFirstIssue (){
+        $x("//a[contains(@id, 'issue_')]").click();
     }
 
     @Attachment(value = "Screenshot", type = "text/html", fileExtension = "html")
