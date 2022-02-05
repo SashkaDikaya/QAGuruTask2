@@ -3,6 +3,7 @@ package com.dikayaav.tests;
 import com.codeborne.selenide.Selenide;
 import com.dikayaav.pages.WebSteps;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import static com.codeborne.selenide.Condition.text;
@@ -25,7 +26,7 @@ public class ParametrizedTest {
         steps.attachPageSource();
     }
 
-        @ValueSource(strings = {"task1", "task2", "task3", "task5"})
+    @ValueSource(strings = {"task1", "task2", "task3", "task5"})
     @ParameterizedTest(name = "Проверка наличия файла .gitignore в бранче : {0}")
     public void checkBranchTest(String branch) {
         Selenide.open("https://github.com/SashkaDikaya/QAGuruTask2");
@@ -33,4 +34,17 @@ public class ParametrizedTest {
         $("div[data-target='ref-selector.listContainer']").$(byText(branch)).click();
         $("[role=grid]").shouldHave(text(".gitignore"));
     }
+
+    @CsvSource(value = {
+            "AnnotatedStepsTest.java, QAGuruTask2/tree/task6",
+            "FillFormTest.java, QAGuruTask11/tree/master"
+    })
+    @ParameterizedTest(name = "Проверка наличия класса: {0}")
+    public void checkRepoTest(String test, String repo) {
+        Selenide.open("https://github.com/SashkaDikaya/" + repo + "/src/test/java/com/dikayaav/tests");
+        $("[role=grid]").shouldHave(text(test));
+    }
+
 }
+
+
