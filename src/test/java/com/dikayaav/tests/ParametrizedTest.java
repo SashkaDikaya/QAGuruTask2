@@ -3,8 +3,12 @@ package com.dikayaav.tests;
 import com.codeborne.selenide.Selenide;
 import com.dikayaav.pages.WebSteps;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.MethodSource;
 import org.junit.jupiter.params.provider.ValueSource;
+
+import java.util.stream.Stream;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
@@ -43,6 +47,21 @@ public class ParametrizedTest {
     public void checkRepoTest(String test, String repo) {
         Selenide.open("https://github.com/SashkaDikaya/" + repo + "/src/test/java/com/dikayaav/tests");
         $("[role=grid]").shouldHave(text(test));
+    }
+
+
+    static Stream<Arguments> checkClassTest() {
+        return Stream.of(
+                Arguments.of("AnnotatedStepsTest.java", "QAGuruTask2/tree/task6", "allure"),
+                Arguments.of("FillFormTest.java", "QAGuruTask11/tree/master", "randomPhoneNumber")
+        );
+    }
+
+    @MethodSource("checkClassTest")
+    @ParameterizedTest(name = "Проверка наличия класса: {0}")
+    public void checkRepoTest1(String test, String repo, String text) {
+        Selenide.open("https://github.com/SashkaDikaya/" + repo + "/src/test/java/com/dikayaav/tests/" + test);
+        $("div table").shouldHave(text(text));
     }
 
 }
