@@ -2,27 +2,39 @@ package dikayaav.tests;
 
 
 import com.codeborne.pdftest.PDF;
-import com.codeborne.selenide.Selenide;
 import com.codeborne.xlstest.XLS;
 import com.opencsv.CSVReader;
 import org.junit.jupiter.api.Test;
 
-import java.io.File;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.List;
 import java.util.zip.ZipEntry;
-import java.util.zip.ZipInputStream;
+import java.util.zip.ZipFile;
 
-import static com.codeborne.pdftest.assertj.Assertions.assertThat;
-import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.$;
+import static org.assertj.core.api.Assertions.assertThat;
+
 
 public class SelenideParsingTest {
 
-    private ClassLoader cl = getClass().getClassLoader();
+
+    //private ClassLoader cl = getClass().getClassLoader();
 
     @Test
+    void parseCsvTest() throws Exception {
+
+        ZipFile zipFile = new ZipFile("src/test/resources/Downloads.zip");
+
+        ZipEntry zipPdfEntry = zipFile.getEntry("programmirov.pdf");
+        try (InputStream inputPdfStream = zipFile.getInputStream(zipPdfEntry)) {
+            PDF parsed = new PDF(inputPdfStream);
+            assertThat(parsed.author).contains("Yakov Fain");
+            assertThat(parsed.numberOfPages).isEqualTo(231);
+            assertThat(parsed.text).contains("BoxLayout - расположение по горизонтали или вертикали");
+        }
+    }
+
+   /* @Test
     void parsePdfTest() throws Exception {
         Selenide.open("https://junit.org/junit5/docs/current/user-guide/");
         File pdfDownload = $(byText("PDF download")).download();
@@ -64,8 +76,8 @@ public class SelenideParsingTest {
 
 
             }
-        }
-    }
+        }*/
+
 }
 
 
