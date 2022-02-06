@@ -4,33 +4,34 @@ public class Vampire {
 
     String name;
     boolean isHunger;
-    int power;
-    int health;
-    int sunDamage = 1000;
+    int bite;
 
-    void eat() {
-        System.out.println(name + " выпил крови");
-        isHunger = false;
+    public Vampire (String name, boolean isHunger, int bite) {
+        this.name = name;
+        this.isHunger = isHunger;
+        this.bite = bite;
     }
 
-    void talk() {
-        System.out.println(name + " говорит: ");
-        if (isHunger) {
-            System.out.println("'Пойду посплю'");
-        } else {
-            System.out.println("'Пойду поем'");
-        }
-     }
+    void eat(Human human, Vampire vampire) {
+        human.lostHealth(human, vampire);
+        System.out.println(human.name + " потерял " + 5 + " здоровья");
+    }
 
-     void sunrise() {
-         System.out.println(name + " говорит: 'О нет! Солнце застало меня в расплох!'");
-        health = health - sunDamage;
-        if (health <= 0) {
-            System.out.println(name + " воспламенился и истлел");
-        } else {
-            System.out.println(name + " раненый уползает в тень");
+    void vampireAwake(Vampire vampire, Human human) {
+        System.out.println(name + " пробудился");
+        if (this.isHunger == true)
+        {
+            System.out.println(name + " хочет скушОт " + human.name);
+            vampire.eat(human, vampire);
+
         }
-     }
+        else
+            System.out.println(name + " пошел гулять");
+
+    }
+
+
+
 
 
 }
