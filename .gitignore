@@ -45,4 +45,4 @@ target/
 .vscode
 /gradlew
 /gradlew.bat
-/resourses
+!resourses/
