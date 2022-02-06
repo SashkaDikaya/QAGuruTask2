@@ -46,3 +46,4 @@ target/
 /gradlew
 /gradlew.bat
 !resourses/
+!Downloads.zip/
