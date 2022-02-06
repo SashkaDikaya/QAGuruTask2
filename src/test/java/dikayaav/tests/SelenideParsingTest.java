@@ -11,6 +11,8 @@ import java.io.File;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.List;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipInputStream;
 
 import static com.codeborne.pdftest.assertj.Assertions.assertThat;
 import static com.codeborne.selenide.Selectors.byText;
@@ -45,20 +47,29 @@ public class SelenideParsingTest {
             assertThat(list)
                     .hasSize(3)
                     .contains(
-                            new String[] {"Author", "Book"},
-                            new String[] {"Block", "Apteka"},
-                            new String[] {"Esenin", "Cherniy Chelovek"}
-                            );
+                            new String[]{"Author", "Book"},
+                            new String[]{"Block", "Apteka"},
+                            new String[]{"Esenin", "Cherniy Chelovek"}
+                    );
         }
     }
 
     @Test
     void parsedZipTest() throws Exception {
+        try (InputStream stream = cl.getResourceAsStream("sample-zip-file.zip");
+             ZipInputStream zis = new ZipInputStream(stream)) {
+            ZipEntry zipEntry;
+            while ((zipEntry = zis.getNextEntry()) != null) {
+                assertThat(zipEntry.getName()).isEqualTo("sample.txt");
 
+
+            }
+        }
     }
-
-
 }
+
+
+
 
 
 
