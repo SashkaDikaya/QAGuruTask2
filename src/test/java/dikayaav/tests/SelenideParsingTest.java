@@ -17,9 +17,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class SelenideParsingTest {
 
-
-    //private ClassLoader cl = getClass().getClassLoader();
-
     @Test
     void parseTests() throws Exception {
 
@@ -55,9 +52,4 @@ public class SelenideParsingTest {
         }
     }
 }
-
-
-
-
-
 
