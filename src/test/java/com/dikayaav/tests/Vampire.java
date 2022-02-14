@@ -34,8 +34,8 @@ public class Vampire extends Human{
 
 
 
-    void bite() {
-
+    void bite(Human human, Vampire vampire) {
+        human.looseHealth(human, vampire);
     }
 
 }

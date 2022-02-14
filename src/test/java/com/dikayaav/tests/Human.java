@@ -17,4 +17,9 @@ void goToWork() {
     }
 }
 
+void looseHealth (Human human, Vampire vampire) {
+    human.health -= 10;
+
+}
+
 }

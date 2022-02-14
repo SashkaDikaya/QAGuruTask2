@@ -34,5 +34,6 @@ public class Test {
         vampire1.sunrise();
         human.goToWork();
         human1.goToWork();
+        //human.looseHealth(human, vampire);
     }
 }
