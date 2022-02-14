@@ -1,6 +1,6 @@
 package com.dikayaav.tests;
 
-public class Human {
+public class Human{
     int health;
     double stamina;
     String name;
@@ -16,4 +16,5 @@ void goToWork() {
         System.out.println(name + " идет домой");
     }
 }
+
 }

@@ -1,6 +1,6 @@
 package com.dikayaav.tests;
 
-public class Vampire {
+public class Vampire extends Human{
 
     String name;
     boolean isHunger;
@@ -32,5 +32,10 @@ public class Vampire {
         }
      }
 
+
+
+    void bite() {
+
+    }
 
 }
