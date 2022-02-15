@@ -22,4 +22,21 @@ void looseHealth (Human human, Vampire vampire) {
 
 }
 
+void battle (Human human, Vampire vampire) {
+    int i = 0;
+    while (human.health > 0 & vampire.health > 0)  {
+        System.out.println(vampire.name + " кусает " + human.name);
+        System.out.println(human.name + " бьет " + vampire.name);
+        human.health -= vampire.power;
+        vampire.health -= human.stamina;
+        i += 1;
+
+    }
+    if (human.health < 0)
+    System.out.println(human.name + " умер. " + vampire.name + " укусил " + human.name + " " + i + "раз" );
+    else
+        System.out.println(vampire.name + " умер. " + human.name + " ударил " + vampire.name + " " + i + "раз" );
+
+}
+
 }
