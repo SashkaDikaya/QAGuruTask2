@@ -33,9 +33,14 @@ public class Vampire extends Human{
      }
 
 
-
     void bite(Human human, Vampire vampire) {
+        System.out.println(vampire.name + " напал на "  + human.name);
         human.looseHealth(human, vampire);
+        if (human.health < 0)
+            System.out.println(human.name + " был випит досуха и умер");
+        else
+        System.out.println("здоровье у " + human.name + " упало до "  + human.health);
+
     }
 
 }

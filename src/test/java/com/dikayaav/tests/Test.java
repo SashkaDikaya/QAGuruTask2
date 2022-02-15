@@ -7,13 +7,13 @@ public class Test {
         vampire.name = "Алукард";
         vampire.health = 1000;
         vampire.isHunger = true;
-        vampire.power = 13;
+        vampire.power = 30;
 
         Vampire vampire1 = new Vampire();
         vampire1.name = "Дракула";
         vampire1.health = 2000;
         vampire1.isHunger = true;
-        vampire1.power = 22;
+        vampire1.power = 50;
 
         Human human = new Human();
         human.name = "Вася";
@@ -23,7 +23,7 @@ public class Test {
 
         Human human1 = new Human();
         human1.name = "Петя";
-        human1.health = 56;
+        human1.health = 45;
         human1.stamina = 56;
         human1.happiness = 15;
 
@@ -34,6 +34,11 @@ public class Test {
         vampire1.sunrise();
         human.goToWork();
         human1.goToWork();
-        //human.looseHealth(human, vampire);
+
+        vampire1.bite(human1, vampire1);
+        vampire1.bite(human, vampire);
+
+
+
     }
 }
