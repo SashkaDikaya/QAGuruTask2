@@ -55,8 +55,5 @@ public class Test {
 
         human.battle(human2, vampire2);
         human.battle(human1, vampire3);
-
-
-
     }
 }
