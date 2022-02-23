@@ -22,14 +22,14 @@ public class TestBase {
     static void setUp() {
 
         CredentialsConfig config = ConfigFactory.create(CredentialsConfig.class);
+
         String login = config.login();
         String password = config.password();
+
         String browser = System.getProperty("browser", "chrome");
         String version = System.getProperty("version", "91");
         String size = System.getProperty("size", "1920x1080");
         String remoteUrl = System.getProperty("remoteUrl", "selenoid.autotests.cloud/wd/hub");
-        //String login = System.getProperty("login", "user1");
-        //String pass = System.getProperty("pass", "1234");
 
         Configuration.baseUrl = "https://demoqa.com";
 
