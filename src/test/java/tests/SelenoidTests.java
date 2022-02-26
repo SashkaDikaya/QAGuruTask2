@@ -10,7 +10,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class SelenoideTests {
+public class SelenoidTests {
 
     // make request to https://selenoid.autotests.cloud/status
     // total is 20
